@@ -28,14 +28,16 @@ html {
     overflow-x: hidden;
 }
 
-    ::-webkit-scrollbar {
-        width: 0px;  /* Remove scrollbar space */
-        background: transparent;  /* Optional: just make scrollbar invisible */
-    }
-    /* Optional: show position indicator in red */
-    ::-webkit-scrollbar-thumb {
-        background: #FF0000;
-    }
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
 /*-----------Header and logo css -----------------*/
 body {
@@ -187,33 +189,24 @@ body {
 
 .grid-4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
 }
 
 
-.prog-lang {
-    margin-top: 3em;
-}
-
 .front-end,
 .back-end,
-.database,
-.version-control {
+.database {
     background-color: #ddd;
     color: black;
-    padding: 16px 32px;
     text-align: center;
     font-size: 16px;
-    margin: 4px 2px;
-    transition: 1s;
-
+    transition: .7s;
 }
 
 .front-end:hover,
 .back-end:hover,
-.database:hover,
-.version-control:hover {
+.database:hover {
     background-color: #f4511e;
     color: white;
     transform: scale(1.1)
@@ -222,8 +215,7 @@ body {
 
 .front-end-icon,
 .back-end-icon,
-.database-icon,
-.version-control-icon {
+.database-icon {
     font-size: 30px;
     margin-top: 1em;
 }
@@ -300,41 +292,29 @@ footer .facebook,
     font-size: 2em;
     margin-right: .5em;
     padding-right: 2em;
-}
-
-.sci .google{
-    color: #777;
-    transition: 0.5s;
-}
-
-.sci .github {
-    color: #777;
-    transition: 0.5s;
-}
-
-.sci .linkedin{
-    color: #777;
-    transition: 0.5s;
-}
-
-.sci .file {
-    color: #777;
-    transition: 0.5s;
+    color: #ddd;
+    transition: 0.4s;
 }
 
 .sci .github:hover {
-    color:#6e5494;
-}
-.sci .linkedin:hover {
-    color: #0077b5;
-}
-.sci .google:hover {
-    color: #d34836;
-}
-.sci .file:hover {
-    color: #e68523;
+    color: #6e5494;
+    transform: scale(1.2)
 }
 
+.sci .linkedin:hover {
+    color: #0077b5;
+    transform: scale(1.2)
+}
+
+.sci .google:hover {
+    color: #d34836;
+    transform: scale(1.2)
+}
+
+.sci .file:hover {
+    color: #e68523;
+    transform: scale(1.2)
+}
 
 .copyright {
     margin-right: 3em;
@@ -408,6 +388,7 @@ li {
         border-bottom: #333 dashed 1px;
         padding: 1.2rem 1rem;
     }
+
     .list {
         margin-left: .9em;
     }
@@ -424,4 +405,3 @@ li {
         top: 5%;
     }
 }
-
