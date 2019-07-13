@@ -16,8 +16,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
     transition: all 1000ms;
 }
 
@@ -86,6 +86,13 @@ ul.topnav li.right {
     margin-top: 1rem;
 }
 
+.profile-pic {
+    border-radius:50%;
+    height: 18em;
+    width: 18em;
+    margin-top: 4em;
+}
+
 .container {
     max-width: 960px;
     margin: auto;
@@ -96,8 +103,7 @@ ul.topnav li.right {
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-
+    grid-gap: 2em;
 }
 
 .center {
@@ -122,17 +128,28 @@ ul.topnav li.right {
 }
 
 .about {
-    min-height: 60vh;
-
+    min-height: 80vh;
 }
 
 .about-me {
-    margin-top:8em;
+    margin-top:6em;
+    margin-right: 10em;
+    padding:auto;
 }
 
 .languages {
-    margin-top: 5em;
-    margin-bottom: 5em;
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    background-image: url('languages.jpg');
+    min-height: 100vh;
+}
+
+.prog-lang {
+    margin-top: 3em;
+
 }
 
 .front-end,
@@ -166,12 +183,6 @@ ul.topnav li.right {
     font-size: 30px;
     margin-top: 1em;
 }
-
-.person {
-    font-size: 50px;
-    margin-top: 2em;
-}
-
 
 .contact {
     content: '';
@@ -242,7 +253,8 @@ footer .facebook,
 .github,
 .google {
     font-size: 2em;
-    margin-left: 2em;
+    margin-right: .5em;
+    padding-right: 2em;
 }
 
 .sci li a {
@@ -255,15 +267,16 @@ footer .facebook,
 }
 
 .copyright {
-    margin-left: 7em;
+    margin-right:3em;
     padding-top: .5em;
     padding-bottom: 1em;
 }
 
+
 /*Media Queries*/
-@media(max-width: 560px) {
+@media (max-width: 576px) {
     .showcase::after {
-        height: 50vh;
+        height: 60vh;
     }
 
     .content {
@@ -272,6 +285,7 @@ footer .facebook,
     }
 
     .content .logo {
+        margin-top: 5em;
         height: 140px;
         width: 140px;
     }
@@ -285,10 +299,32 @@ footer .facebook,
         grid-template-columns: 1fr;
     }
 
+    .about-me {
+        margin: auto;
+        padding: auto;
+
+    }
+    
+    .profile-pic {
+        border-radius:50%;
+        height: 10em;
+        width: 10em;
+        margin: auto;
+    }
+
     .languages div {
         border-bottom: #333 dashed 1px;
         padding: 1.2rem 1rem;
     }
+    footer .facebook,
+    .linkedin,
+    .github,
+    .google {
+        margin:auto; 
+        padding: auto;
+    }
+    
+
 }
 
 li {
