@@ -1,5 +1,43 @@
 @import url('normalize.css');
 
+/*--------- REUSABLE ELEMENTS */
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+    color: #f4f4f4;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+    ::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+
+/*-----------Header and logo css -----------------*/
 body {
     background: rgba(0, 0, 0, 0.9);
     margin: 0;
@@ -60,6 +98,9 @@ body {
     margin-top: 1rem;
 }
 
+
+/*----------- ABOUT SECTION --------*/
+
 .profile-pic {
     border-radius: 50%;
     height: 18em;
@@ -67,33 +108,6 @@ body {
     margin-top: 4em;
 }
 
-.container {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 4rem 1rem;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2em;
-}
-
-.center {
-    text-align: center;
-    margin: auto;
-}
-
-.bg-light {
-    background: #f4f4f4;
-    color: #333;
-}
-
-.bg-dark {
-    background: #333;
-    color: #f4f4f4;
-}
 
 .grid-2 {
     display: grid;
@@ -111,6 +125,56 @@ body {
     padding: auto;
 }
 
+.dropbtn {
+    background: #333;
+    color: #f4f4f4;
+    padding: 1em;
+    font-size: 16px;
+    border: none;
+    transition: all 1s ease-in-out;
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    margin-left: 6.1em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 9px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown .dropdown-content a:hover {
+    background-color: #f4511e;
+    transform: scale(1.1);
+    transition: .8s;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0e0e10;
+}
+
+/*---------PROGRAMMING LANGUAGE ------------------*/
+
 .languages {
 
     background-size: cover;
@@ -121,9 +185,15 @@ body {
     min-height: 100vh;
 }
 
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3em;
+}
+
+
 .prog-lang {
     margin-top: 3em;
-
 }
 
 .front-end,
@@ -232,20 +302,52 @@ footer .facebook,
     padding-right: 2em;
 }
 
-.sci li a {
+.sci .google{
     color: #777;
     transition: 0.5s;
 }
 
-.sci li a:hover {
-    color: #fff;
+.sci .github {
+    color: #777;
+    transition: 0.5s;
 }
+
+.sci .linkedin{
+    color: #777;
+    transition: 0.5s;
+}
+
+.sci .file {
+    color: #777;
+    transition: 0.5s;
+}
+
+.sci .github:hover {
+    color:#6e5494;
+}
+.sci .linkedin:hover {
+    color: #0077b5;
+}
+.sci .google:hover {
+    color: #d34836;
+}
+.sci .file:hover {
+    color: #e68523;
+}
+
 
 .copyright {
     margin-right: 3em;
     padding-top: .5em;
     padding-bottom: 1em;
 }
+
+li {
+    list-style: none;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+
 
 
 /*Media Queries*/
@@ -282,21 +384,18 @@ footer .facebook,
 
     .dropbtn {
         margin-top: .5em;
-        margin-left: 5em;
+        margin-left: 1.6em;
     }
+
     .dropdown:hover .dropdown-content {
-        display: flex;
-        margin-left: 4.3em;
+        display: block;
+        margin-left: 4.4em;
     }
-  
+
     .dropdown .dropdown-content a:hover {
-    background-color: #f4511e;
-    transform: scale(1.1)
-}
-
-    
-
-
+        background-color: #f4511e;
+        transform: scale(1.1)
+    }
 
     .profile-pic {
         border-radius: 50%;
@@ -309,23 +408,9 @@ footer .facebook,
         border-bottom: #333 dashed 1px;
         padding: 1.2rem 1rem;
     }
-
-    footer .facebook,
-    .linkedin,
-    .github,
-    .google,
-    file {
-        margin: auto;
-        padding: auto;
+    .list {
+        margin-left: .9em;
     }
-
-
-}
-
-li {
-    list-style: none;
-    font-weight: lighter;
-    margin-bottom: 1em;
 }
 
 @media(max-height: 500px) {
@@ -340,50 +425,3 @@ li {
     }
 }
 
-
-.dropbtn {
-    background: #333;
-    color: #f4f4f4;
-    padding: 1em;
-    font-size: 16px;
-    border: none;
-    transition: all 1s ease-in-out;
-}
-
-.dropdown {
-    position: absolute;
-    display: flex;
-    margin-left: 6.1em;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#f4f4f4;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 9px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown .dropdown-content a:hover {
-    background-color: #f4511e;
-    transform: scale(1.1);
-    transition: .8s;
-    color: white;
-}
-.dropdown:hover .dropdown-content {
-    
-    display: block;
-    transition: all 1s ease-in-out;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #0e0e10;
-}
