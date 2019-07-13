@@ -280,6 +280,24 @@ footer .facebook,
 
     }
 
+    .dropbtn {
+        margin-top: .5em;
+        margin-left: 5em;
+    }
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        margin-left: 4.3em;
+    }
+  
+    .dropdown .dropdown-content a:hover {
+    background-color: #f4511e;
+    transform: scale(1.1)
+}
+
+    
+
+
+
     .profile-pic {
         border-radius: 50%;
         height: 10em;
@@ -354,11 +372,14 @@ li {
     display: block;
 }
 
-.dropdown-content a:hover {
-    background-color:#f4f4f4;
+.dropdown .dropdown-content a:hover {
+    background-color: #f4511e;
+    transform: scale(1.1);
+    transition: .8s;
+    color: white;
 }
-
 .dropdown:hover .dropdown-content {
+    
     display: block;
     transition: all 1s ease-in-out;
 }
