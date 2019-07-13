@@ -5,12 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
     <title>Portfolio</title>
 </head>
 
 <body>
+
+    <ul class="topnav">
+        <li class="right"><a href="#about">Resume</a></li>
+        <li class="right"><a href="#about">Projects</a></li>
+        <li class="right"><a href="#about">Contact</a></li>
+    </ul>
     <header class="showcase">
+
         <div class="content">
             <img src="/logo2.png" class="logo" alt="background-image">
             <div class="title">
@@ -22,11 +33,30 @@
         </div>
     </header>
 
+    <section class="about bg-light">
+        <div class="container">
+            <div class="grid-2">
+                <div class="center">
+                    <ion-icon name="person" class="person"></ion-icon>
+                </div>
+                <div class="center about-me">
+                    <h3>About Me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, facilis accusamus
+                        reprehenderit perferendis dolorem molestiae sapiente. Reprehenderit perferendis amet, alias
+                        atque et, eaque deserunt explicabo harum at
+                        rerum praesentium modi nihil natus beatae soluta voluptate a iste inventore, quod voluptatem!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Languages -->
     <section class="languages">
         <div class="container grid-4 center">
             <div class="front-end">
-                <ion-icon name="desktop" class="front-end-icon" ></ion-icon>
+                <ion-icon name="desktop" class="front-end-icon"></ion-icon>
                 <h3>Front End</h3>
                 <li>HTML5</li>
                 <li>CSS3</li>
@@ -41,11 +71,11 @@
                 <li>EXPRESS</li>
             </div>
             <div class="database">
-                <ion-icon name="build" class="database-icon" ></ion-icon>
+                <ion-icon name="build" class="database-icon"></ion-icon>
                 <h3>Database</h3>
                 <li>POSTGRESQL</li>
             </div>
-            <div  class="version-control">
+            <div class="version-control">
                 <ion-icon name="cloud-outline" class="version-control-icon"></ion-icon>
                 <h3>Version Control</h3>
                 <li>GIT</li>
@@ -53,30 +83,59 @@
         </div>
     </section>
 
-
-    <section class="about bg-light">
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="grid-2">
-                <div class="center">
-                    <ion-icon name="person" class="person"></ion-icon>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headerText text-center">
+                        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Hire me</h2>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Lorem ipsum dolor sit amet
+                            consectetur adi</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>About Me</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, facilis accusamus reprehenderit perferendis dolorem molestiae sapiente. Reprehenderit perferendis amet, alias atque et, eaque deserunt explicabo harum at 
-                        rerum praesentium modi nihil natus beatae soluta voluptate a iste inventore, quod voluptatem!</p>
+            </div>
+            <div class="row clearfix">
+                <div class="offset-sm-2 col-sm-8">
+                    <form data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Phone</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Message</label>
+                            <textarea class="form-control textarea" name=""></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btnD1">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="center bg-dark">
+    <footer class="sci center bg-dark">
         <br>
-        <li>
-            <a href="https://www.linkedin.com/in/aljan-agamao-050890110/"  target="_blank"> <ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
-            <a href="https://github.com/agamaoaljan6" target="_blank"><ion-icon name="logo-github" class="github"></ion-icon></a>
-            <ion-icon name="logo-facebook" class="facebook"></ion-icon>
-            <ion-icon name="logo-google" class="google"></ion-icon>
-        </li>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/aljan-agamao-050890110/" target="_blank"> <i class="fa fa-linkedin linkedin"></i></a>
+                <a href="https://github.com/agamaoaljan6" target="_blank"> <i class="fa fa-github github"></i></a>
+                <a href="https://www.facebook.com/namjachingu25" target="_blank"> <i class="fa fa-facebook facebook"></i></a>
+                <a href="mailto: agamaoaljan@gmail.com" target="_blank"> <i class="fa fa-google google"></i></a>
+
+            </li>
+        </ul>
+        <p class="copyright">
+            Copyright 2019 Nature | Template by <a href="#"> Me </a>
+        </p>
     </footer>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
