@@ -107,9 +107,13 @@ body {
     border-radius: 50%;
     height: 18em;
     width: 18em;
-    margin-top: 4em;
+    margin-top: 4em;   
+    transition: .6s;
 }
 
+.profile-pic:hover {
+    transform: scale(1.1)
+}
 
 .grid-2 {
     display: grid;
@@ -161,12 +165,11 @@ body {
 .dropdown .dropdown-content a:hover {
     background-color: #f4511e;
     transform: scale(1.1);
-    transition: .8s;
+    transition: .6s;
     color: white;
 }
 
 .dropdown:hover .dropdown-content {
-
     display: block;
     transition: all 1s ease-in-out;
 }
@@ -187,12 +190,17 @@ body {
     min-height: 100vh;
 }
 
+.front-end,
+.back-end,
+.database, li {
+    text-transform: uppercase;
+}
+
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
 }
-
 
 .front-end,
 .back-end,
@@ -207,7 +215,7 @@ body {
 .front-end:hover,
 .back-end:hover,
 .database:hover {
-    background-color: #f4511e;
+    background-color: #929d5a;
     color: white;
     transform: scale(1.1)
 }
@@ -224,7 +232,7 @@ body {
     content: '';
     height: 100vh;
     width: 100%;
-    background-image: url('bg-image2.jpg');
+    background-image: url('contact-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
