@@ -1,6 +1,6 @@
 @import url('normalize.css');
 
-/*--------- REUSABLE ELEMENTS */
+/*--------- REUSABLE ELEMENTS-------------- */
 .container {
     max-width: 960px;
     margin: auto;
@@ -39,13 +39,25 @@ html {
     background: #FF0000;
 }
 
-/*-----------Header and logo css -----------------*/
+
+li {
+    list-style: none;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+
 body {
     background: rgba(0, 0, 0, 0.9);
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+footer {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+/*-----------Header and logo css -----------------*/
 
 .showcase::after {
     content: '';
@@ -56,6 +68,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
+    
     filter: blur(8px);
     -webkit-filter: blur(8px);
     transition: all 1000ms;
@@ -178,10 +191,9 @@ body {
     background-color: #0e0e10;
 }
 
-/*---------PROGRAMMING LANGUAGE ------------------*/
+/*---------PROGRAMMING LANGUAGE SECTION ------------------*/
 
 .languages {
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -192,11 +204,11 @@ body {
 
 .front-end,
 .back-end,
-.database, li {
+.database{
     text-transform: uppercase;
 }
 
-.grid-4 {
+.grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
@@ -228,6 +240,10 @@ body {
     margin-top: 1em;
 }
 
+
+/*---------- CONTACT FORM --------------*/
+
+
 .contact {
     content: '';
     height: 100vh;
@@ -236,12 +252,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: block;
+    min-height: 100px;
 }
 
 .contact form {
-    position: relative;
-    z-index: 1000;
+    margin-top: 3em;
 }
 
 .contact .form-control {
@@ -249,10 +264,11 @@ body {
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, .2);
     height: 50px;
-    border-radius: 0;
-    background: rgba(0, 0, 0, .6);
+    border-radius: 5;
+    background: rgba(0, 0, 0, .5);
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1em;
+    z-index: 1;
 }
 
 .contact .form-control:focus,
@@ -262,13 +278,9 @@ body {
     box-shadow: none;
 }
 
-.contact .textarea {
-    min-height: 100px;
-}
-
 .contact label {
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1.3em;
 }
 
 .btnD1 {
@@ -283,14 +295,8 @@ body {
     margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-}
 
-footer {
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
+/*---------FOOTER ICONS AND COPYRIGHT----------*/
 
 footer .facebook,
 .linkedin,
@@ -299,7 +305,7 @@ footer .facebook,
 .file {
     font-size: 2em;
     margin-right: .5em;
-    padding-right: 2em;
+    padding-right: 1em;
     color: #ddd;
     transition: 0.4s;
 }
@@ -325,20 +331,11 @@ footer .facebook,
 }
 
 .copyright {
-    margin-right: 3em;
-    padding-top: .5em;
-    padding-bottom: 1em;
+    margin-right: .5em;
+
 }
 
-li {
-    list-style: none;
-    font-weight: lighter;
-    margin-bottom: 1em;
-}
-
-
-
-/*Media Queries*/
+/*--------MEDIA QUERIES FOR MOBILE FIRST-------------*/
 @media (max-width: 576px) {
     .showcase::after {
         height: 60vh;
@@ -372,7 +369,7 @@ li {
 
     .dropbtn {
         margin-top: .5em;
-        margin-left: 1.6em;
+        margin-left:5em;
     }
 
     .dropdown:hover .dropdown-content {
@@ -413,3 +410,4 @@ li {
         top: 5%;
     }
 }
+
